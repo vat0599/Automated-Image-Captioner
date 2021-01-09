@@ -8,5 +8,7 @@ The idea of this program is to read an image and give a textual description of i
 - You are ready to go, run the cells serially, and the training begins at some point. The training takes fairly long time if you are using CPU.
 - After that you can test with any image input, and observe the results.
 
+## How the code works?
+
 ## Contributions
 Do not hesitate to contribute by [filling an issue](https://github.com/vat0599/Automated-Image-Captioner/issues) or [a PR](https://github.com/vat0599/Automated-Image-Captioner/pulls) !
