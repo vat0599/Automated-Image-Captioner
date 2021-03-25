@@ -12,7 +12,7 @@ The idea of this program is to read an image and give a textual description of i
 
 The code is fairly straightforward. First, we take Resnet (a convolutional neural network used to understand image input by converting it into a feature vector) to capture the feature vector of all the input image. This is important because, once the model understands the contents present inside the image, it'll be easy to map it with the caption text present.
 
-Thus after we get the long vector containing features of all the images, we then do some preprocessing to the caption text. The words in the captions are converted to indices, which are vectorized to one hot encodings. After padding appropriately, we have a vector representing the texts, as well as a vector representing the input image features.
+After we get the long vector containing features of all the images, we then do some preprocessing to the caption text. The words in the captions are converted to indices, which are vectorized to one hot encodings. After padding appropriately, we have a vector representing the texts, as well as a vector representing the input image features.
 
 Now, we form a dual model, which runs parallelly, one for images and other captions. As we can see in the model description below, the first model takes encoded image vector as an input, and passes through dense layers followed by repeat vector; while the language model takes, the vectorized captions as input vector and passes through LSTM (a recurrent neural network which serves the purpose of understanding sentences and their meaning and context) and a time distribution which allows us to apply a layer to every temporal slice of an input.
 
