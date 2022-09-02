@@ -20,7 +20,7 @@ Now, we form a dual model, which runs parallelly, one for images and other capti
 
 Finally after these 2 models are parallely processed they are now combined as shown above. The outputs from the image model and the language model is concatenated and passed through 2 LSTM networks followed by dense NNs. Finally a softmax activation is used giving a flattened output vector. Overall RMSprop is used as the optimizer.
 
-During testing, the model looks at the objects and people present in the image and matches to the possible words and strings up a sentence. At times the sentence doesn't make complete sense, or has grammatical error. This is because some objects in the image might resemble to some other object during training leading to some misclassification. Or there were not enough sentences for the neural net to understand sentence formation thus leading to broken sentences. Overall the model well and captured quite relevant information.
+During testing, the model looks at the objects and people present in the image and matches to the possible words and strings up a sentence. At times the sentence doesn't make complete sense, or has grammatical error. This is because some objects in the image might resemble to some other object during training leading to some misclassification. Or there were not enough sentences for the neural net to understand sentence formation thus leading to broken sentences. Overall the model performs well and captured quite relevant information.
 
 ## Some output screenshots
 While the outputs from most of the images turned out to be good, some didnt make sense. As explained above in algo flow section, it is mainly because of over resemblance to some images and less number of captions.
